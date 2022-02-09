@@ -17,6 +17,10 @@
 
 http://10.30.234.46:3000/  
 
+**Rotas Disponibilizadas:**
+
+- http://10.30.234.46:3000/github/{username}
+
 **Conteúdos Aprendidos:**
 
 - Criação do Projeto
