@@ -24,3 +24,4 @@ http://10.30.234.46:3000/
 **Conteúdos Aprendidos:**
 
 - Criação do Projeto
+- Criação da Rota Username, que faz uma chamada para a api do github
