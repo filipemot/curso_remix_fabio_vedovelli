@@ -25,3 +25,6 @@ http://10.30.234.46:3000/
 
 - Criação do Projeto
 - Criação da Rota Username, que faz uma chamada para a api do github
+- Organizando as partes em componentes
+- Criação de rotas para child componentes
+- Instalação Tailwind

@@ -1,31 +1,25 @@
 import { LoaderFunction, useLoaderData } from "remix";
+import { Api, GithubContainer, LoaderData } from "~/features/github";
 
-export interface User {
-    login: string;
-    avatar_url: string;
-    html_url: string;
-    bio: string;
-}
-
-export interface LoaderData {
-    user: User;
-}
 
 export const loader: LoaderFunction = async({params}) => {
-    const res = await fetch(`https://api.github.com/users/${params.username}` );
-    return {
-        user: await res.json()
+
+    return{
+        user: await Api.getGithubUser(params.username)
+    }
+}
+
+export function ErrorBoundary() {
+    const {data, error} = useLoaderData<GithubContainer>();
+
+    if(error){
+        return <div>{error.message}</div>
     }
 }
 
 export default function() {
     const {user} = useLoaderData<LoaderData>();
 
-    return ( 
-        <>
-            <h1>{user.login}</h1>
-            <blockquote>{user.bio}</blockquote>
-            <img src={user.avatar_url} alt={user.login} width="150" />
-        </>
-    )
+    return <GithubContainer user={user} />;
+
 }
