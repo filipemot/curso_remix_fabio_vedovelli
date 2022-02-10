@@ -4,11 +4,11 @@
 
 **Dependências**
 
-npm install --global yarn
+    npm install --global yarn
 
 **Instalação - Remix App Server:**
 
-npx create-remix@latest github
+    npx create-remix@latest github
 
 **É necessário criar um um arquivo .env:**
 
