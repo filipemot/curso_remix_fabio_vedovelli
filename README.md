@@ -1,25 +1,31 @@
-# Curso Remix - Fábio Vedovelli - 2022  
 
-**Dependências** 
-
-    npm install --global yarn  
-
-**Instalação - Remix App Server:** 
-
-    npx create-remix@latest github
+# Curso Remix - Fábio Vedovelli - 2022
  
 
-**Execução:**  
+**Dependências**
 
-    yarn dev  
+npm install --global yarn
 
-**Acesso:**  
+**Instalação - Remix App Server:**
 
-http://10.30.234.46:3000/  
+npx create-remix@latest github
+
+**É necessário criar um um arquivo .env:**
+
+    npm add dotenv --save
+    
+**No arquivo  .env crie a variável GITHUB_TOKEN:**
+
+    GITHUB_TOKEN=Token do Github
+
+**Execução:**
+
+    yarn dev
 
 **Rotas Disponibilizadas:**
 
-- http://10.30.234.46:3000/github/{username}
+- {dominio_gerado_remix}/github/{username}
+  
 
 **Conteúdos Aprendidos:**
 
