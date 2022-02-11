@@ -11,16 +11,16 @@ import {
 } from "@heroicons/react/solid";
 import { MenuAlt1Icon, XIcon } from "@heroicons/react/outline";
 import { Outlet } from "remix";
-import { User, Repo } from "./types";
+import { Repositories, User } from "../Github.types";
 import { classNames } from "~/util";
-import { activityItems, navigation, projects, userNavigation } from "./util";
+import { navigation, userNavigation } from "../Github.util";
 
-export interface GithubContainerProps {
+export interface RepositoriesProps {
   user: User;
-  repos: Repo[];
+  repos: Repositories.Repo[];
 }
 
-export function GithubContainer({ user, repos }: GithubContainerProps) {
+export function Repositories({ user, repos }: RepositoriesProps) {
   return (
     <>
       <div

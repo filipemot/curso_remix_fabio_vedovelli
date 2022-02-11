@@ -1,10 +1,11 @@
 export interface User {
-    login: string;
-    avatar_url: string;
-    html_url: string;
-    bio: string;
-  }
-  
+  login: string;
+  avatar_url: string;
+  html_url: string;
+  bio: string;
+}
+
+export namespace Repositories {
   export interface Repo {
     id: number;
     name: string;
@@ -13,8 +14,9 @@ export interface User {
     html_url: string;
     language: string;
   }
-  
+
   export interface LoaderData {
     user: User;
     repos: Repo[];
   }
+}
