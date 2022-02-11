@@ -76,7 +76,7 @@ export function Repository({ repo }: RepositoryProps) {
             <span>Berlin</span>
           </p>
         </div>
-      </div> */}
+      </div> }
     </li>
   );
 }
