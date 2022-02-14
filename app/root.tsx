@@ -6,6 +6,10 @@ import {
   Scripts,
   ScrollRestoration
 } from "remix";
+
+const dotenv = require("dotenv");
+dotenv.config();
+
 import type { MetaFunction } from "remix";
 
 import styles from "./tailwind.css";

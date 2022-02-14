@@ -1,8 +1,7 @@
 import invariant from "tiny-invariant";
 import pick from "lodash/pick";
 import { Types } from ".";
-const dotenv = require("dotenv");
-dotenv.config();
+
 const config = {
   headers: {
     accept: "application/vnd.github.v3+json",
@@ -38,7 +37,10 @@ export const getUserRepos = async (username?: string) => {
   );
 };
 
-export const getCommits = async (reponame?: string, username?: string) => {
+export const getCommits = async (
+  reponame?: string,
+  username?: string
+): Promise<Types.Commits.Commit[]> => {
   invariant(reponame, "Please provide an repository name as a string");
   invariant(username, "Please provide an user name as a string");
 
@@ -47,5 +49,9 @@ export const getCommits = async (reponame?: string, username?: string) => {
     config
   );
 
-  return await res.json();
+  return (await res.json()).map((commit: Types.Commits.ApiResponse) => ({
+    sha: commit.sha,
+    message: commit.commit.message,
+    hmtl_url: commit.html_url,
+  }));
 };

@@ -1,3 +1,4 @@
+import { ChevronRightIcon, StarIcon } from "@heroicons/react/solid";
 import { Link } from "remix";
 import { Types } from "..";
 
@@ -8,8 +9,10 @@ export interface RepositoryProps {
 export function Repository({ repo }: RepositoryProps) {
   return (
     <li className="relative pl-4 pr-6 py-5 hover:bg-gray-50 sm:py-6 sm:pl-6 lg:pl-8 xl:pl-6">
-      <Link to={repo.name}>{repo.full_name}</Link>
-      {/* <div className="flex items-center justify-between space-x-4">
+      <Link
+        to={repo.name}
+        className="flex items-center justify-between space-x-4"
+      >
         <div className="min-w-0 space-y-3">
           <div className="flex items-center space-x-3">
             <span
@@ -18,16 +21,15 @@ export function Repository({ repo }: RepositoryProps) {
             >
               <span className="bg-green-400 h-2 w-2 rounded-full" />
             </span>
+
             <span className="block">
               <h2 className="text-sm font-medium">
-                <a href="#">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  {repo.full_name}{" "}
-                </a>
+                <span className="absolute inset-0" aria-hidden="true" />
+                {repo.full_name}{" "}
               </h2>
             </span>
           </div>
-          <a href="#" className="relative group flex items-center space-x-2.5">
+          <div className="relative group flex items-center space-x-2.5">
             <svg
               className="flex-shrink-0 w-5 h-5 text-gray-400 group-hover:text-gray-500"
               viewBox="0 0 18 18"
@@ -45,7 +47,7 @@ export function Repository({ repo }: RepositoryProps) {
             <span className="text-sm text-gray-500 group-hover:text-gray-900 font-medium truncate">
               {repo.full_name}
             </span>
-          </a>
+          </div>
         </div>
         <div className="sm:hidden">
           <ChevronRightIcon
@@ -53,6 +55,7 @@ export function Repository({ repo }: RepositoryProps) {
             aria-hidden="true"
           />
         </div>
+
         <div className="hidden sm:flex flex-col flex-shrink-0 items-end space-y-3">
           <p className="flex items-center space-x-4">
             <button
@@ -76,7 +79,7 @@ export function Repository({ repo }: RepositoryProps) {
             <span>Berlin</span>
           </p>
         </div>
-      </div> }
+      </Link>
     </li>
   );
 }
