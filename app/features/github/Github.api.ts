@@ -2,6 +2,8 @@ import invariant from "tiny-invariant";
 import pick from "lodash/pick";
 import { Types } from ".";
 
+const dotenv = require("dotenv");
+dotenv.config();
 const config = {
   headers: {
     accept: "application/vnd.github.v3+json",
