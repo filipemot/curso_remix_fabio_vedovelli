@@ -34,3 +34,4 @@
 - Organizando as partes em componentes
 - Criação de rotas para child componentes
 - Instalação Tailwind
+- Link prefetch="intent", que é usado para carregar os componentes antes de serem renderizados
