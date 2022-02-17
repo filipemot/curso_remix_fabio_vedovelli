@@ -12,6 +12,7 @@ export const users: SelectedUser[] = [
   { id: 3, username: "Larry" },
   { id: 4, username: "Thomas" },
   { id: 5, username: "Paul" },
+  { id: 6, username: "filipemot" }
 ];
 
 export default function SelectUser() {
