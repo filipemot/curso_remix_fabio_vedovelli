@@ -77,7 +77,6 @@ export function Repository({ repo }: RepositoryProps) {
           <p className="flex text-gray-500 text-sm space-x-2">
             <span>{repo.language}</span>
             <span aria-hidden="true">&middot;</span>
-            <span>Berlin</span>
           </p>
         </div>
       </Link>
