@@ -20,7 +20,11 @@
 
 **Geração BD prisma:**
 
-    npx prisma generate
+    npx prisma db push
+
+**Carergar o banco de dados:**
+
+    yarn db:seed
 
 **Execução:**
 
