@@ -7,3 +7,4 @@ node_modules
 /*.bak
 /app/tailwind.css
 /*.env
+/prisma/db.dev

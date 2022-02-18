@@ -18,6 +18,10 @@
 
     GITHUB_TOKEN=Token do Github
 
+**Geração BD prisma:**
+
+    npx prisma generate
+
 **Execução:**
 
     yarn dev
@@ -35,3 +39,4 @@
 - Criação de rotas para child componentes
 - Instalação Tailwind
 - Link prefetch="intent", que é usado para carregar os componentes antes de serem renderizados
+- Add Prisma
