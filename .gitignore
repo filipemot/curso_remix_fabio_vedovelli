@@ -9,3 +9,4 @@ node_modules
 /*.env
 /prisma/db.dev
 /prisma/*.db
+prisma/dev.db
