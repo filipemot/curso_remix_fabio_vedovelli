@@ -9,7 +9,7 @@ export async function getCourses(): Promise<Course[]> {
     },
   });
 }
-
+// @ts-ignore
 export async function createCourse(data): Promise<Course> {
   return db.course.create({
     data: Validator.parse(data),

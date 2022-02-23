@@ -33,7 +33,7 @@ export const action: ActionFunction = async ({
         },
       };
     }
-
+    // @ts-ignore
     throw new Error(error.message);
   }
 };
