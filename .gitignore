@@ -10,3 +10,4 @@ node_modules
 /prisma/db.dev
 /prisma/*.db
 prisma/dev.db
+prisma/dev.db
